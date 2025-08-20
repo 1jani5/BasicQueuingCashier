@@ -13,15 +13,28 @@ namespace BasicQueuingCashier
 {
     public partial class CashierWindowQueueForm : Form
     {
+
+        Timer timer = new Timer();
         public CashierWindowQueueForm()
         {
             InitializeComponent();
+            timer.Interval = (1 * 1000);// 1 sec.
+            timer.Tick += new EventHandler(timer1_Tick); //timer1_tick represents the name of Tick Event
+            timer.Start();
 
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            if(CashierClass.CashierQueue.Count > 0)
+            {
+                string remove = CashierClass.CashierQueue.Dequeue();              
+                DisplayCashierQueue(CashierClass.CashierQueue);
+            }
+            else
+            {
+                MessageBox.Show("No customers in the queue.");
+            }
         }
 
         private void refbut1_Click(object sender, EventArgs e)
@@ -37,6 +50,11 @@ namespace BasicQueuingCashier
             {
                 listCashierQueue.Items.Add(obj.ToString());
             }
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            DisplayCashierQueue(CashierClass.CashierQueue);
         }
     }
     }

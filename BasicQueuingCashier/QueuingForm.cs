@@ -15,13 +15,14 @@ namespace BasicQueuingCashier
     public partial class QueuingForm : Form
     {
         private CashierClass cashier;
-         
+         CashierWindowQueueForm form = new CashierWindowQueueForm();    
 
 
         public QueuingForm()
         {
             InitializeComponent();
             cashier = new CashierClass();
+            form.Show();
 
         }
 

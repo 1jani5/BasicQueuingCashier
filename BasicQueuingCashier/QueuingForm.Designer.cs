@@ -38,8 +38,7 @@
             // 
             // btnCashier
             // 
-            this.btnCashier.BackColor = System.Drawing.Color.Transparent;
-            this.btnCashier.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnCashier.BackgroundImage")));
+            this.btnCashier.BackColor = System.Drawing.Color.SkyBlue;
             this.btnCashier.Font = new System.Drawing.Font("Perpetua Titling MT", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCashier.Location = new System.Drawing.Point(73, 125);
             this.btnCashier.Name = "btnCashier";

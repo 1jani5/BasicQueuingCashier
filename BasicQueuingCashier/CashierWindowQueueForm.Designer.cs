@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CashierWindowQueueForm));
             this.btnRefresh = new System.Windows.Forms.Button();
             this.btnNext = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -63,7 +64,7 @@
             // 
             this.panel1.Controls.Add(this.btnNext);
             this.panel1.Controls.Add(this.btnRefresh);
-            this.panel1.Location = new System.Drawing.Point(2, 0);
+            this.panel1.Location = new System.Drawing.Point(1, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(123, 479);
             this.panel1.TabIndex = 2;
@@ -72,9 +73,9 @@
             // 
             this.listCashierQueue.Alignment = System.Windows.Forms.ListViewAlignment.Default;
             this.listCashierQueue.HideSelection = false;
-            this.listCashierQueue.Location = new System.Drawing.Point(124, 0);
+            this.listCashierQueue.Location = new System.Drawing.Point(131, 12);
             this.listCashierQueue.Name = "listCashierQueue";
-            this.listCashierQueue.Size = new System.Drawing.Size(348, 476);
+            this.listCashierQueue.Size = new System.Drawing.Size(330, 437);
             this.listCashierQueue.Sorting = System.Windows.Forms.SortOrder.Ascending;
             this.listCashierQueue.TabIndex = 3;
             this.listCashierQueue.UseCompatibleStateImageBehavior = false;
@@ -89,11 +90,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(472, 477);
             this.Controls.Add(this.listCashierQueue);
             this.Controls.Add(this.panel1);
             this.Name = "CashierWindowQueueForm";
             this.Text = "CashierWindowQueueForm";
+            this.Load += new System.EventHandler(this.CashierWindowQueueForm_Load);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 

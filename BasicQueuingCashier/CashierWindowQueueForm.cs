@@ -21,6 +21,7 @@ namespace BasicQueuingCashier
             timer.Interval = (1 * 1000);// 1 sec.
             timer.Tick += new EventHandler(timer1_Tick); //timer1_tick represents the name of Tick Event
             timer.Start();
+            panel1.BackColor = Color.FromArgb(100, Color.WhiteSmoke);
 
         }
 
@@ -55,6 +56,11 @@ namespace BasicQueuingCashier
         private void timer1_Tick(object sender, EventArgs e)
         {
             DisplayCashierQueue(CashierClass.CashierQueue);
+        }
+
+        private void CashierWindowQueueForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
     }

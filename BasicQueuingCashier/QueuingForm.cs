@@ -35,6 +35,9 @@ namespace BasicQueuingCashier
             lblQueue.Text = cashier.CashierGeneratedNumber("P - ");
             CashierClass.getNumberInQueue = lblQueue.Text;
             CashierClass.CashierQueue.Enqueue(CashierClass.getNumberInQueue);
+
+
+
         }
     }
 }

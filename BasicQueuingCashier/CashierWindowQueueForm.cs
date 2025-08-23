@@ -15,6 +15,8 @@ namespace BasicQueuingCashier
     {
 
         Timer timer = new Timer();
+        private CashierClass cashier;
+        CustomerView newform = new CustomerView();
         public CashierWindowQueueForm()
         {
             InitializeComponent();
@@ -23,7 +25,12 @@ namespace BasicQueuingCashier
             timer.Start();
             panel1.BackColor = Color.FromArgb(100, Color.WhiteSmoke);
 
+            cashier = new CashierClass();
+            newform.Show();
         }
+
+
+
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -31,6 +38,7 @@ namespace BasicQueuingCashier
             {
                 string remove = CashierClass.CashierQueue.Dequeue();              
                 DisplayCashierQueue(CashierClass.CashierQueue);
+                newform.UpdateNowServing(remove);
             }
             else
             {
